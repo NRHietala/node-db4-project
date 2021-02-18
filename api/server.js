@@ -1,7 +1,10 @@
 const express = require("express");
 const server = express();
-
 server.use(express.json());
+
+const recipeRouter = require("./recipes/recipes-router.js");
+
+server.use("/api/recipes", recipeRouter);
 
 server.get("/", (_, res) => {
   res.send("Is your API running? You should go catch it! 🏃‍");
