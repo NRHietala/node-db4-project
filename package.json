@@ -1,0 +1,33 @@
+{
+  "name": "node-db4-project",
+  "version": "1.0.0",
+  "description": "Follow these steps to set up and work on your project:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "server":"nodemon index.js",
+    "migratedb":"npx knex migrate:latest",
+    "rollbackdb":"npx knex migrate:rollback"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NRHietala/node-db4-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NRHietala/node-db4-project/issues"
+  },
+  "homepage": "https://github.com/NRHietala/node-db4-project#readme",
+  "devDependencies": {
+    "eslint": "^7.20.0",
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.21.17",
+    "sqlite3": "^5.0.2"
+  }
+}
