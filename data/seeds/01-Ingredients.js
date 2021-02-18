@@ -1,13 +1,11 @@
 exports.seed = function (knex) {
-  // Deletes ALL existing entries
   return knex("ingredients")
-    .del()
+    .truncate()
     .then(function () {
-      // Inserts seed entries
       return knex("ingredients").insert([
-        { ingredient_id: 1, Ingredient: "Water" },
-        { ingredient_id: 2, Ingredient: "Butter" },
-        { ingredient_id: 3, Ingredient: "Salt" },
+        { ingredient_id: 1, ingredient: "Water", ingredient_amount: "1 cup" },
+        { ingredient_id: 2, ingredient: "Butter", ingredient_amount: "1 gram" },
+        { ingredient_id: 3, ingredient: "Salt", ingredient_amount: "1 grain" },
       ]);
     });
 };
