@@ -1,6 +1,8 @@
 const db = require("../../data/db-config.js");
 
-const getRecipes = () => {};
+const getRecipes = () => {
+  return db("recipes");
+};
 
 const getShoppingList = () => {};
 
